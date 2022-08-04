@@ -48,7 +48,7 @@ body {
   height: 3.5rem;
 }
 
-.header-text-box {
+.header__text-box {
   text-transform: uppercase;
   color: #fff;
   position: absolute;
