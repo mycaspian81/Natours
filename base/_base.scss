@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+*::selection {
+    background-color: $color-primary;
+    color: #fff;
+}
+
 html {
     font-size: 62.5%;
 }
