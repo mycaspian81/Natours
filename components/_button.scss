@@ -1,4 +1,5 @@
 .btn {
+
     &:link,
     &:visited {
         text-decoration: none;
@@ -35,7 +36,8 @@
         }
     }
 
-    &:active {
+    &:active,
+    &:focus {
         transform: translateY(-1px);
         box-shadow: 0 .5rem 1rem rgba($color-black, .2);
     }
@@ -76,4 +78,42 @@
         box-shadow: 0 .5rem 1rem rgba($color-black, .15);
     }
 
+}
+
+.btn--green {
+
+    &,
+    &:link,
+    &:visited {
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        background-color: $color-primary;
+        color: $color-white;
+        font-size: $default-font-size;
+        cursor: pointer;
+
+        // for buttun
+        outline: none;
+        border: none;
+
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        background-color: $color-primary;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 100px;
+        position: absolute;
+        z-index: -1;
+        transition: all .5s;
+    }
 }
