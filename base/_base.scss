@@ -13,8 +13,42 @@
 
 html {
     font-size: 62.5%;
+    overflow-x: hidden;
+
+    @media (min-width: 1500px) {
+        font-size: 68%;
+    }
+
+    @include respond (first) {
+        font-size: 56%;
+    }
+
+    @include respond (second) {
+        font-size: 52%;
+    }
+
+    @include respond (third) {
+        font-size: 46%;
+    }
+
+    @include respond (fourth) {
+        font-size: 40.62%; // 7.5 px
+    }
+
+    @include respond(eighth) {
+        font-size: 37.5%; // 6 px
+    }
 }
 
 body {
     padding: 3rem;
+
+    @include respond (fifth) {
+        padding: 0;
+    }
+
+    @media (min-width: 2000px) {
+        width: 85%;
+        margin: 0 auto;
+    }
 }

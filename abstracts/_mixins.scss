@@ -5,3 +5,42 @@
         clear: both;
     }
 }
+
+
+@mixin respond ($breakpoint) {
+    @if $breakpoint == first {  // - 1260 px
+        @media (max-width: 78.75em) { @content };
+    }
+
+    @if $breakpoint == second { // - 1126 px
+        @media (max-width: 70.38em) { @content };
+    }
+
+    @if $breakpoint == third { // - 988 px
+        @media (max-width: 61.75em) { @content };
+    }
+
+    @if $breakpoint == fourth { // - 861 px
+        @media (max-width: 53.87em) { @content };
+    }
+
+    @if $breakpoint == fifth { // - 760 px
+        @media (max-width: 47.5em) { @content };
+    }
+
+    @if $breakpoint == sixth { // - 652 px
+        @media (max-width: 40.75em) { @content };
+    }
+
+    @if $breakpoint == seventh { // - 550 px
+        @media (max-width: 34.37em) { @content };
+    }
+
+    @if $breakpoint == eighth { // - 300 px
+        @media (max-width: 18.75em) { @content };
+    }
+
+    @if $breakpoint == bookbreak { // - 440 px
+        @media (max-width: 27.5em) { @content };
+    }
+}

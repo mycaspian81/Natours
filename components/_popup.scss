@@ -13,7 +13,6 @@
 
     &__content {
         width: 75%;
-        height: 75vh;
         background-color: $color-white;
         position: absolute;
         top: 50%;
@@ -26,6 +25,12 @@
         justify-content: center;
         align-items: center;
         transition: all .3s .2s;
+
+        @include respond(fourth) {
+            flex-direction: column;
+            height: auto;
+            width: 75%;
+        }
     }
 
     &__left {
@@ -33,16 +38,31 @@
         height: 100%;
         display: flex;
         flex-direction: column;
+
+        @include respond(fourth) {
+            flex-direction: row;
+            width: 100%;
+        }
     }
 
     &__right {
         width: 66.66%;
+        padding: 3rem;
+
+        @include respond(fourth) {
+            width: auto;
+            padding: 0 3rem 3rem 3rem;
+        }
     }
 
     &__img {
-        width: 100%;
         height: 100%;
         display: inline-block;
+
+        @include respond(fourth) {
+            width: calc(100% / 2);
+            height: auto;
+        }
     }
 
     &__text {
@@ -51,6 +71,13 @@
         column-gap: 3rem;
         column-rule: 1px solid $color-gray-light-2;
         hyphens: auto;
+        padding: 4rem;
+
+        @include respond(fourth) {
+            column-count: 1;
+            column-rule: none;
+            padding: 1rem;
+        }
     }
 
     &__close {
@@ -59,16 +86,22 @@
         position: absolute;
         top: 2rem;
         right: 2rem;
-        font-size: 2.5rem;
+        font-size: 3rem;
         text-decoration: none;
         border-radius: 50%;
         color: inherit;
         line-height: 1;
         transition: all .2s;
-        
+
 
         &:hover {
             color: $color-primary;
+        }
+
+        @include respond(fourth) {
+            font-size: 5rem;
+            top: 1rem;
+            right: 3rem;
         }
     }
 

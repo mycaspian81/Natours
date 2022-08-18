@@ -19,4 +19,16 @@
         color: transparent;
     }
 
+    @include respond(sixth) {
+        max-height: 32rem;
+    }
+
+}
+
+.feature-boxes {
+
+    @include respond(sixth) {
+        max-height: 35rem;
+        width: 100%;
+    }
 }

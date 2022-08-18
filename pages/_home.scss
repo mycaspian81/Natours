@@ -2,6 +2,14 @@
     padding: 25rem 3rem;
     background-color: $color-gray-light-1;
     margin-top: -20vh;
+
+    @include respond(third) {
+        padding: 40rem 3rem 25rem;
+    }
+
+    @include respond(eighth) {
+        padding: 25rem 3rem 25rem;
+    }
 }
 
 .section-features {
@@ -16,17 +24,34 @@
     & > * {
         transform: skewY(7deg);
     }
+
+    @include respond(seventh) {
+        padding: 15rem 3rem;
+        transform: skewY(-9deg);
+
+    & > * {
+        transform: skewY(9deg);
+    }
+    }
 }
 
 .section-tours {
-    padding: 25rem 3rem 10rem ;
+    padding: 25rem 3rem 10rem;
     background-color: $color-gray-light-1;
     margin-top: -10rem;
+
+    @include respond(seventh) {
+        padding: 20rem 3rem 10rem;
+    }
 }
 
 .section__stories {
     position: relative;
     padding: 15rem 3rem 5rem;
+
+    @include respond(seventh) {
+        padding: 5rem 3rem 0;
+    }
 }
 
 .section-book {
@@ -39,11 +64,27 @@
     background-repeat: no-repeat;
     box-shadow: 0 1rem 4rem rgba($color-black, .5);
     background-size: cover;
-    height: 55rem;
+    min-height: 55rem;
     border-radius: 3px;
 
     &__form {
         width: 50%;
         padding: 6rem;
+
+        @include respond(sixth) {
+            width: 70%;
+        }
+
+        @include respond(bookbreak) {
+            width: 100%;
+        }
+    }
+
+    @include respond(sixth) {
+        background-image: linear-gradient(105deg,rgba($color-white, .9) 70%, transparent 70%) ,url(../img/nat-10.jpg);
+    }
+    
+    @include respond(bookbreak) {
+        background-image: linear-gradient(105deg,rgba($color-white, .9) 100%, transparent 0%) ,url(../img/nat-10.jpg);
     }
 }

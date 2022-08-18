@@ -1,7 +1,6 @@
 .story {
     width: 75%;
     background-color: rgba($color-white, .6);
-    margin: 0 auto;
     box-shadow: 0 3rem 6rem rgba($color-black, .1);
     border-radius: 3px;
     padding: 6rem;
@@ -12,6 +11,10 @@
 
     &__text {
         transform: skewX(12deg);
+
+        @include respond(bookbreak) {
+            transform: translateX(0);
+        }
     }
 
     &__shape {
@@ -19,11 +22,19 @@
         width: 15rem;
         height: 15rem;
         float: left;
-        shape-outside: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
         backface-visibility: hidden;
+        border-radius: 50%;
+
+        @include respond(bookbreak) {
+            transform: translateX(0) skewX(0);
+        }
+
+        @supports (clip-path: circle(0)) {
+            clip-path: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+        }
     }
 
     &__img {
@@ -57,7 +68,15 @@
         filter: blur(3px) brightness(80%);
     }
 
-    &:not(:last-child) {
-        margin-bottom: 10rem;
+    @include respond(bookbreak) {
+        transform: skewX(0);
+    }
+
+    @include respond(bookbreak) {
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
     }
 }

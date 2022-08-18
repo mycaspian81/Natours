@@ -15,6 +15,16 @@
         z-index: 200;
         text-align: center;
         box-shadow: 0 5px 7px rgba($color-black, .2);
+
+        @include respond (fifth) {
+            top: 3.5rem;
+            right: 3.5rem;
+        }
+
+        @include respond (sixth) {
+            top: 2.5rem;
+            right: 2.5rem;
+        }
     }
 
     &__background {
@@ -30,7 +40,15 @@
         transition: all .6s;
 
 
-        // transform: scale(80);
+        @include respond (fifth) {
+            top: 4rem;
+            right: 4rem;
+        }
+
+        @include respond (sixth) {
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &__nav {

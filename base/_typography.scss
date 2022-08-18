@@ -13,10 +13,24 @@ body {
         font-size: 6rem;
         font-weight: 400;
         letter-spacing: 3.5rem;
+        text-align: center;
 
         animation-name: moveInLeft;
         animation-duration: 1s;
         animation-timing-function: ease-out;
+
+        @include respond (sixth) {
+            font-size: 5rem;
+            letter-spacing: 2rem;
+        }
+
+        @include respond (seventh) {
+            font-size: 4rem;
+        }
+
+        @include respond (eighth) {
+            font-size: 2.5rem;
+        }
     }
 
     &--sub {
@@ -28,7 +42,22 @@ body {
         animation-name: moveInRight;
         animation-duration: 1s;
         animation-timing-function: ease-out;
+
+        @include respond (sixth) {
+            font-size: 1.75rem;
+            letter-spacing: .8rem;
+        }
+
+        @include respond (seventh) {
+            font-size: 1.5rem;
+        }
+
+        @include respond (eighth) {
+            font-size: .8rem;
+            margin: 0 auto;
+        }
     }
+
 }
 
 .heading-secondary {
@@ -46,6 +75,20 @@ body {
     &:hover {
         transform: skewY(2deg) skewX(15deg) scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+
+
+
+    @include respond (sixth) {
+        font-size: 3rem;
+    }
+
+    @include respond (seventh) {
+        font-size: 2.5rem;
+    }
+
+    @include respond (eighth) {
+        font-size: 2rem;
     }
 }
 
