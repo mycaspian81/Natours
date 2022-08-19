@@ -1,5 +1,6 @@
 .row {
     max-width: $grid-width;
+    margin: 0 auto;
 }
 
 .flex {
@@ -31,7 +32,7 @@
     &-2-col {
         grid-template-columns: 1fr 1fr;
 
-        @include respond (seventh) {
+        @include respond (sixth) {
             grid-template-columns: 1fr;
         }
     }

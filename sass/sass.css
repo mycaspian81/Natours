@@ -1216,7 +1216,7 @@ body {
 }
 
 .header {
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero-small.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   background-position: top;
   background-size: cover;
   height: 85vh;
@@ -1247,11 +1247,6 @@ body {
             clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
   }
 }
-@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 37.5rem), (min-resolution: 192dpi) and (max-width: 37.5rem), (min-width: 125em) {
-  .header {
-    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero-small.jpg);
-  }
-}
 @supports ((-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))) or (-webkit-clip-path: polygon(0 0)) {
   .header {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -1269,6 +1264,7 @@ body {
 
 .row {
   max-width: 114rem;
+  margin: 0 auto;
 }
 
 .flex {
@@ -1298,7 +1294,7 @@ body {
 .grid-2-col {
   grid-template-columns: 1fr 1fr;
 }
-@media (max-width: 34.37em) {
+@media (max-width: 40.75em) {
   .grid-2-col {
     grid-template-columns: 1fr;
   }
